@@ -1,0 +1,38 @@
+.ant-tabs-nav .ant-tabs-tab-active {
+    position: relative;
+    width: 50%;
+    height: .7rem;
+    line-height: .7rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #ff7100;
+}
+
+.ant-tabs-nav .ant-tabs-tab:hover {
+    color: #ff7100;
+}
+
+.ant-tabs-ink-bar {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    z-index: 1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 2px;
+}
+
+.ant-tabs-ink-bar-animated {
+    width: 150px !important;
+    background-color: #ff7100 !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}

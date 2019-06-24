@@ -1,0 +1,109 @@
+.phone{
+    .notice{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: .76rem;
+            color: #ff3c00;
+            background: #fff7ea;
+            img{
+                    display: inline-block;
+                    margin-left: .5rem;
+                    margin-right: .15rem;
+                    width: .3rem;
+                    height: .3rem;           
+                }
+                span{
+                    font-size: .3rem;
+                }
+            }
+            
+        .phone_container{
+            padding: 0 .5rem;
+            padding-top: .3rem;
+            text-align: left;
+            .has_account{
+                align-items: center;
+                font-size: .28rem;
+                color: #666;            
+                img{display: inline-block;
+                margin-right: .1rem;
+                width: .13rem;
+                height: .23rem;
+                }
+
+            }
+            .container__logo{
+                margin-top: .8rem;
+                height: .45rem;
+                background: url(../../img/yxk.png) 50% no-repeat;
+                background-size: 4rem .45rem;
+            
+            }
+            .mLogin__inputbox{
+                margin-top: .45rem;
+                align-items: center;
+                width: 100%;
+                height: .9rem;
+                padding-top: .2rem;
+                border-bottom: 1px solid #d4d4d4;
+            }
+            .container__submit{
+                color: #999;
+                background: #e5e5e5;
+                margin-top: .3rem;
+                height: .88rem;
+                line-height: .88rem;
+                text-align: center;
+                font-size: .36rem;
+                border-radius: .1rem;
+            }
+            .agree{
+                margin-top: .3rem;
+                font-size: .28rem;
+                color: #333;
+                input{
+                     display: inline-block;
+                margin-right: .1rem;
+                width: .3rem;
+                height: .3rem;
+                border:.0133rem solid #eee;
+                }
+                span{
+                    font-size: .28rem;
+                    color: #ff7100;
+                }
+                .ant-checkbox-wrapper + span, .ant-checkbox + span {
+                    padding-right: 0px;
+                    padding-left: 0px;
+                }
+                .ant-checkbox-checked .ant-checkbox-inner {
+                    border-color: #ff7100;
+                    &:after{
+                        color:#ff7100;
+
+                    }
+                }
+                .ant-checkbox-checked .ant-checkbox-inner {
+               background: #fff;
+    
+            }
+        }
+  .mLogin__xcx {
+                width: 100%;
+                height: .99rem;
+                line-height: .99rem;
+                // background: #fff7ea;
+                text-align: center;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                z-index: 3;
+                p{
+                    font-size: .3rem;
+                    color: #ff7100;
+                }
+            }
+        
+        }
+}
