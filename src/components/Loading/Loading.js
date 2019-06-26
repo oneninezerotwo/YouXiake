@@ -1,4 +1,5 @@
 import React from 'react';
+import 'weui';
 class Loading extends React.Component {
 
     state = {

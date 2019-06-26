@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Tabs, Checkbox } from 'antd';
+import { Tabs } from 'antd';
 import './tab.css';
 
 const { TabPane } = Tabs;
@@ -14,8 +14,9 @@ class Tab extends Component {
                 <Tabs defaultActiveKey="1" onChange={callback}>
                     <TabPane tab="手机号注册" key="1">
                         <div className="mLogin__inputbox">
-                            <input type="text" placeholder="请输入手机号" /></div>
-                        
+                            <input type="text" placeholder="请输入手机号" onChange={this.props.changeNum} style={{
+                                fontSize: '.34rem', paddingLeft: '.2rem',
+                            }} /></div>
                     </TabPane>
                     <TabPane tab="手机号注册" key="2">
                         <div className="mLogin__inputbox">

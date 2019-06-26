@@ -1,0 +1,28 @@
+.mt button {
+    margin-right: .5rem;
+    margin-top: .5rem
+}
+
+input {
+    font-size: .26rem;
+}
+
+.timer {
+    padding: 20px;
+}
+
+.show1 {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: bold;
+    padding: 0 14px;
+    border-radius: 4px;
+    display: none;
+    top: 116px;
+    height: 30px;
+    line-height: 30px;
+}

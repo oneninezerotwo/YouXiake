@@ -241,3 +241,127 @@
     background-size: 100% 100%;
 }
 
+.mUserCenter__logout {
+    margin: 0 auto;
+    margin-top: .5rem;
+    width: 5.36rem;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: .1rem;
+    background: #fff;
+}
+
+.header__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1rem;
+}
+
+.header__user .user__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__user .user__name div {
+    margin-right: .3rem;
+    max-width: 2.7rem;
+    font-size: .44rem;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.header__user .user__name i {
+    position: relative;
+    display: inline-block;
+    width: .37rem;
+    height: .37rem;
+    background: url(../../img/bianxie.png) 50% no-repeat;
+    background-size: 100% 100%;
+}
+
+.header__user .user__name i span {
+    position: absolute;
+    left: -.94rem;
+    top: -.6rem;
+    width: 3.06rem;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    border-radius: .25rem;
+    font-size: .24rem;
+    font-style: normal;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, right top, from(#ff6000), to(#ffa32c));
+    background: linear-gradient(90deg, #ff6000, #ffa32c);
+}
+
+.header__user .user__name i span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -.1rem;
+    margin-left: -.1rem;
+    width: .19rem;
+    height: .1rem;
+    background: url(../../img/icon.png) 50% no-repeat;
+    background-size: 100% 100%;
+}
+
+.header__box .header__user .user_level {
+    display: flex
+}
+
+.header__box .header__user .user_level span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__user .user_level span {
+    margin-right: .15rem;
+    padding-right: .15rem;
+    height: .3rem;
+    border-radius: .15rem;
+    font-size: .2rem;
+    color: #d8ab78;
+    background: #000 url(../../img/tj.png) 0 no-repeat;
+    background-size: .77rem .3rem;
+}
+
+.header__user .user_level span:before {
+    content: "";
+    display: inline-block;
+    margin-left: .15rem;
+    width: .3rem;
+    height: .21rem;
+    background: url(../../img/icon1.png) 50% no-repeat;
+    background-size: .3rem .21rem;
+}
+
+.header__user .user_level i {
+    padding-left: .4rem;
+    padding-right: .15rem;
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .2rem;
+    font-style: normal;
+    color: #000;
+    border-radius: .15rem;
+    background: #fff2b3 .15rem no-repeat;
+    background-size: .2rem .2rem;
+}

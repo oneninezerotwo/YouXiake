@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import 'antd/dist/antd.css';
 import './login.css';
+import Dialog from '../../components/Dialog/Dialog';
 import img from '../../img/nav.png';
 import img1 from '../../img/nav1.png';
 import img2 from '../../img/nav2.png';
@@ -68,22 +69,37 @@ class Register extends Component {
             {
                 imgUrl: img12,
                 name: '游侠客APP'
-            }]
+            }],
+            flag: true
         }
 
     }
     render() {
-
         return (
             <div className="main">
                 {/* 头部 */}
-                <div className="mUserCenterHeader"><div className="header__box"><div className="header__avatar"></div> <div className="header__login">去登录/注册<span>新用户注册送388元大礼包</span></div></div></div>
+                <div className="mUserCenterHeader">
+                    <div className="header__box">
+                        <div className="header__avatar"></div>
+                        {sessionStorage.getItem('username') ?
+                            (<div className="header__user">
+                                <div className="user__name">
+                                    <div>{sessionStorage.getItem('username')}</div>
+                                    <i><span>完善资料送100元代金券</span></i></div> <div className="user_level">
+                                    <span>1 普陀山</span><i style={{ backgroundImage: `url(&quot;&quot;` }}>普通会员</i></div></div>)
+                            : (
+                                <div className="header__login">去登录/注册<span>新用户注册送388元大礼包</span>
+                                </div>)
+                        }
+                    </div>
+                </div>
                 {/* 活动订单 */}
+
                 <div className="mUserCenterOrders">
                     <div className="mUserCenterOrders__head">
                         <b>活动订单</b><span>
                             <Link to="/register" style={
-                                {color:'#333'}
+                                { color: '#333' }
                             }>全部</Link></span>
                     </div>
                     <div className="mUser__container">
@@ -93,7 +109,6 @@ class Register extends Component {
                                     <img src={item.imgUrl} alt="" />
                                     <span>{item.name}</span>
                                 </div>
-
                             })
                         }
                     </div>
@@ -117,10 +132,22 @@ class Register extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
 
+                {/* {sessionStorage.getItem('username') ?
+                    <div class="mUserCenter__logout" onClick={this.quit.bind(this)}>退出登录</div> : null} */}
+                {
+                    sessionStorage.getItem('username') ?
+                        (<Dialog />) : null
+                }
+            </div>
         )
     }
+    clickReload() {
+        this.setState({
+            flag: true
+        })
+    }
+
 }
 export default Register;
 
