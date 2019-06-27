@@ -7,12 +7,10 @@ class App extends Component {
   
   render() {
     return (
-      <div className="container">
         <Switch>
           <Route path="/home" component={Home}/>
           <Redirect from="/" to="/home" />
         </Switch>
-      </div>
     );
   }
 
