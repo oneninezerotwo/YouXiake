@@ -1,0 +1,8 @@
+.banner{
+    margin: .27rem .4rem .4rem;
+    height: .84rem;
+    overflow: hidden;
+    border-radius: 8px;
+    background:url(../../img/activity.png) no-repeat;
+    background-size:contain
+}

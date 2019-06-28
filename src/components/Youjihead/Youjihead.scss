@@ -1,0 +1,42 @@
+.youhead{
+    height: .79rem;
+    background: #232323;
+    padding: .2rem .2rem 0;
+    span{
+        float:left;
+        display: block;
+        &.youleft{
+            background: url(../../img/yhome.png) no-repeat;
+            height: .4rem;
+            width: .46rem;
+            background-size: 100% auto;
+        }
+        &.youcenter{
+                background: url(../../img/ylogo.png) no-repeat;
+                height: .46rem;
+                width: 1.18rem;
+                background-size: 100% auto;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: .2rem;
+                margin-left: -.59rem;
+            }
+            &.youright{
+                background: url(../../img/yuser.png) no-repeat;
+                height: .42rem;
+                width: .4rem;
+                background-size: 100% auto;
+                display: block;
+                float: right;
+                margin: .04rem 0 0;
+                position: relative;
+                z-index: 1;
+           
+
+            }
+            }
+        }
+        
+ 
+   

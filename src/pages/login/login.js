@@ -1,153 +1,135 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-
 import 'antd/dist/antd.css';
-import './login.css';
-import Dialog from '../../components/Dialog/Dialog';
-import img from '../../img/nav.png';
-import img1 from '../../img/nav1.png';
-import img2 from '../../img/nav2.png';
-import img3 from '../../img/nav3.png';
-import img4 from '../../img/nav4.png';
+import './Login.css';
+import img1 from '../../img/wechat.png';
+import img2 from '../../img/qq.png';
+import { Link, Redirect } from "react-router-dom";
+import Mask from '../../components/Mask/Mask';
 
-import img5 from '../../img/1.png';
-import img6 from '../../img/2.png';
-import img7 from '../../img/3.png';
-import img8 from '../../img/4.png';
-import img9 from '../../img/5.png';
-import img10 from '../../img/6.png';
-import img11 from '../../img/7.png';
-import img12 from '../../img/8.png';
-
-
-// import Footer from '../../components/footer/footer';
-
-class Register extends Component {
+class Login extends Component {
     constructor() {
         super()
-
         this.state = {
-            list: [{
-                imgUrl: img,
-                name: '待付款'
-            }, {
-                imgUrl: img1,
-                name: '报名成功'
-            }, {
-                imgUrl: img2,
-                name: '替补'
-            }, {
-                imgUrl: img3,
-                name: '待评价'
-            }, {
-                imgUrl: img4,
-                name: '退款/取消'
-            }],
-            service: [{
-                imgUrl: img5,
-                name: '签证订单'
-            }, {
-                imgUrl: img6,
-                name: '集市签证'
-            }, {
-                imgUrl: img7,
-                name: '集市购物'
-            }, {
-                imgUrl: img8,
-                name: '常用收货地址'
-            }, {
-                imgUrl: img9,
-                name: '常用出行人'
-            }, {
-                imgUrl: img10,
-                name: '修改密码'
-            },
-            {
-                imgUrl: img11,
-                name: '在线客服'
-            },
-            {
-                imgUrl: img12,
-                name: '游侠客APP'
-            }],
-            flag: true
+            message: '',
+            isLogin: false,
+            isMask: 0,
+            loginFlag: false
         }
-
     }
     render() {
+        if (this.state.loginFlag) {
+            return <Redirect to={{ pathname: "/mine" }} />;
+        }
         return (
-            <div className="main">
-                {/* 头部 */}
-                <div className="mUserCenterHeader">
-                    <div className="header__box">
-                        <div className="header__avatar"></div>
-                        {sessionStorage.getItem('username') ?
-                            (<div className="header__user">
-                                <div className="user__name">
-                                    <div>{sessionStorage.getItem('username')}</div>
-                                    <i><span>完善资料送100元代金券</span></i></div> <div className="user_level">
-                                    <span>1 普陀山</span><i style={{ backgroundImage: `url(&quot;&quot;` }}>普通会员</i></div></div>)
-                            : (
-                                <div className="header__login">去登录/注册<span>新用户注册送388元大礼包</span>
-                                </div>)
-                        }
-                    </div>
-                </div>
-                {/* 活动订单 */}
-
-                <div className="mUserCenterOrders">
-                    <div className="mUserCenterOrders__head">
-                        <b>活动订单</b><span>
-                            <Link to="/register" style={
-                                { color: '#333' }
-                            }>全部</Link></span>
-                    </div>
-                    <div className="mUser__container">
-                        {
-                            this.state.list.map((item, index) => {
-                                return <div className='Orders__container' key={index}>
-                                    <img src={item.imgUrl} alt="" />
-                                    <span>{item.name}</span>
-                                </div>
-                            })
-                        }
-                    </div>
-                </div>
-                {/*  */}
-                <div className="mUserCenterWallet"><div className="mUserCenterWallet__head">我的钱包<i></i></div> </div>
-                {/*  */}
-                <div className="mUserCenterService"><div className="mUserCenterService__head">我的服务</div>
-                    <div className="mUserCenterService">
-                        <div className="mUserCenterService__container">
-                            <div className="mUserCenterService_row">
-                                {
-                                    this.state.service.map((item, index) => {
-                                        return <a href="/visas/order-list" className="mUserCenterService__box mUserCenterService__box--visa" key={index}>
-                                            <img src={item.imgUrl} />
-                                            <span>{item.name}</span></a>
-                                    })
-                                }
-
-                            </div>
+            <div className="register">
+                <div className="mLogin">
+                    {/*  */}
+                    <div className="mLogin__top">
+                        <div className="mLogin__top__logo">
                         </div>
                     </div>
-                </div>
-
-                {/* {sessionStorage.getItem('username') ?
-                    <div class="mUserCenter__logout" onClick={this.quit.bind(this)}>退出登录</div> : null} */}
+                    {/*  */}
+                    <div className="mLogin__content">
+                        <div className="mLogin__content__tabs"><span className="cur">账号登录</span><span className="">短信快捷登录</span></div>
+                    </div>
+                    <div className="mLogin__content__from">
+                        <div className="user">
+                            <div className="mLogin__inputbox">
+                                <input type="text" placeholder="手机号/邮箱" onChange={
+                                    this.changeEmail.bind(this)
+                                } /></div>
+                            <div className="mLogin__inputbox"><input maxLength="12" minLength="6" placeholder="请输入密码" type="password" onChange={
+                                this.changePsw.bind(this)
+                            } /></div>
+                            <div className="mLogin__content__from__forget"><span>忘记密码？</span></div>
+                            <div className="mLogin__button mLogin__content__from__login mLoginYellow">
+                                <button onClick={this.login.bind(this)}>登录</button>
+                                {
+                                    this.state.isLogin ? (<span style={{ display: "block" }}>{this.state.message}</span>) : ''
+                                }
+                            </div>
+                            <div className="mLogin__button mLogin__content__from__register">
+                                <Link to="/register">手机快速注册</Link>
+                            </div>
+                            <div className="mLogin__content__from__third"><div className="third__title"><span>第三方登录/注册</span> <div className="third__title__line">
+                            </div></div>
+                                <div className="third__item">
+                                    <div className="third__item__wechat">
+                                        <img src={img1} />
+                                    </div> <div className="third__item__qq">
+                                        <img src={img2} />
+                                    </div></div></div>
+                            <div className="mLogin__bottom"><p>
+                                登录即代表您已经同意我们的
+    <span>《注册服务协议》</span></p></div>
+                        </div>
+                    </div>
+                </div >
+                <div className="mLogin__xcx" onClick={this.isMaskshow.bind(this)}><p>体验"游侠客"微信小程序</p></div>
                 {
-                    sessionStorage.getItem('username') ?
-                        (<Dialog />) : null
+                    this.state.isMask ? <Mask isMaskhide={this.isMaskhide.bind(this)} /> : null
+
                 }
             </div>
         )
     }
-    clickReload() {
+    changeEmail(e) {
+        let value = e.target.value;
         this.setState({
-            flag: true
+            email: value
+        })
+        sessionStorage.setItem('username', value)
+    }
+    changePsw(e) {
+        let psw = e.target.value;
+        this.setState({
+            password: psw
+        })
+        sessionStorage.setItem('password', psw)
+    }
+    login() {
+        clearTimeout()
+        if (!this.state.email) {
+            this.setState({
+                message: '请输入手机号或邮箱',
+                isLogin: true
+            })
+            setTimeout(() => {
+                this.setState({
+                    isLogin: false
+                });
+            }, 1000);
+
+        } else if (!this.state.password) {
+            this.setState({
+                message: '请输入密码',
+                isLogin: true
+            })
+            setTimeout(() => {
+                this.setState({
+                    isLogin: false
+                });
+            }, 1000);
+
+        } else if (this.state.email && this.state.password) {
+            this.setState({
+                loginFlag: true
+            })
+            sessionStorage.setItem('username', this.state.email);
+        }
+
+    }
+    isMaskshow() {
+        this.setState({
+            isMask: 1
+        })
+    }
+    isMaskhide() {
+        this.setState({
+            isMask: 0
         })
     }
 
 }
-export default Register;
+export default Login;
 

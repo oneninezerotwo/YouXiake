@@ -1,0 +1,29 @@
+.footernav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    height: 1.1rem;
+    background: #fff;
+    z-index: 1000;
+}
+
+.footerlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlist img {
+    width: .54rem;
+    height: .54rem;
+}
+
+.footerlist span {
+    /* color: #333; */
+    height: .9rem;
+    font-size: .22rem;
+    color: #999;
+}

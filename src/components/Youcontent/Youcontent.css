@@ -1,0 +1,110 @@
+.youtab .ant-tabs .ant-tabs-top-bar .ant-tabs-nav-container .ant-tabs-tab-arrow-show {
+    opacity: 0 !important;
+}
+
+.ant-tabs-nav-container-scrolling {
+    padding: 0;
+}
+
+.ant-tabs-nav {
+    width: 100%;
+    font-size: .32rem;
+    color: #888;
+    padding-bottom: .05rem;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+    position: relative;
+    width: 30%;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .32rem;
+}
+
+.ant-tabs-ink-bar-animated {
+    width: 30% !important;
+    background-color: 4px solid #ffd800 !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab:hover {
+    color: #444;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+    padding: 0;
+    flex: 1;
+    width: 30%;
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .32rem;
+}
+
+.ant-tabs-nav-animated>div {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    width: 100%;
+}
+
+.youtab {
+    margin: 0 .4rem;
+}
+
+.list {
+    padding: .4rem 0 .3rem;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.list .listleft {
+    float: left;
+}
+
+.list .listleft>img {
+    height: 1.45rem;
+}
+
+.list .listleft p img {
+    width: .52rem;
+    height: .52rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    margin-right: .13rem;
+}
+
+.list .listleft p {
+    margin-top: .25rem;
+    width: 100%;
+    overflow: hidden;
+    font-size: .24rem;
+    color: #888;
+}
+
+.list .listright {
+    width: 3.65rem;
+    float: right;
+}
+
+.list .listright p {
+    font-size: .32rem;
+    color: #444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: 1.33rem;
+}
+
+.list .listright>span {
+    display: inline-block;
+    width: 85px;
+}
+
+.list .listright span img {
+    height: .23rem;
+    width: .35rem;
+    margin-right: .13rem;
+}

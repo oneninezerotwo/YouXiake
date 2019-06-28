@@ -1,0 +1,55 @@
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+  position:relative;
+}
+.ant-carousel .slick-slide h3 img{
+  height:211px;
+}
+.ant-carousel .slick-dots li{
+   margin:0 4px;
+}
+.ant-carousel .slick-dots li button {
+    border-radius: 50%;
+    cursor: pointer;
+    width: .23rem;
+    height: .23rem;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,.3);
+    opacity: 1;
+}
+.ant-carousel .slick-dots li.slick-active button {
+    background: #ff9a00;
+    opacity: 1;
+    width: .23rem;
+    height: .23rem;
+}
+.title p{
+   width: 100%;
+    padding: 0 .4rem;
+    position: absolute;
+    bottom: 4.66rem;
+    color: #fff;
+    font-size: .36rem;
+    text-shadow: 0 0 8px #444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index:100;
+    height:2.0rem;
+    font-weight:bold;
+    display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+
+}
+/* .carousel{
+  position:relative;
+} */
+   
