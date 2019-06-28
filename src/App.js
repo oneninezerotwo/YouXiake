@@ -7,19 +7,22 @@ import Phone from './pages/register/phoneregister';
 import Order from './pages/order/order';
 import Timer from './pages/register/timer';
 import Home from './pages/Home/Home';
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/timer" component={Timer} />
-        <Route path="/phone" component={Phone} />
-        <Route path="/order" component={Order} />
-        <Route path="/home" component={Home}/>
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </Router>
-  );
-
+ class App extends React.Component{
+  render(){
+    return (
+      <Router>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/timer" component={Timer} />
+          <Route path="/phone" component={Phone} />
+          <Route path="/order" component={Order} />
+          <Route path="/home" component={Home}/>
+          <Redirect from="/" to="/home" />
+        </Switch>
+      </Router>
+    )
   }
+  }
+
+  export default App;
