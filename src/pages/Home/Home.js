@@ -12,11 +12,16 @@ import HomeSport from "./HomeSport";
 import HomeGlobal from "./HomeGlobal";
 import HomeTheme from "./HomeTheme";
 import HomeHero from "./HomeHero";
+<<<<<<< HEAD
 import Footer from "../../components/Footer/Footer";
+=======
+import Footcom from "../../components/footer/Footcom"
+>>>>>>> lxd
 
 
 import axios from "axios";
 import "./home.css"
+
 
 
 class Home extends Component {
@@ -75,6 +80,7 @@ class Home extends Component {
           <HomeTopBanner />
           <HomeSearch />
         </div>
+<<<<<<< HEAD
         <HomeMainNav data={this.state.navs} />
         <HomeSecondNav />
         <HomeRaiders />
@@ -89,6 +95,22 @@ class Home extends Component {
         <HomeTheme data={this.state.theme.data} />
         <HomeHero data={this.state.post} />
         <Footer />
+=======
+        <HomeMainNav data={this.state.navs}/>
+        <HomeSecondNav/>
+        <HomeRaiders/>
+        <HomeRecommend data={this.state.lb2}/>
+        <HomeTimelimit data={this.state.sale}/>
+        <HomeLocal local_ad={this.state.local_ad} local={this.state.local} local_banner={this.state.local_banner}/>
+        <HomeClassified data={this.state.classified[0]}/>
+        <HomeClassified data={this.state.classified[1]}/>
+        <HomeClassified data={this.state.classified[2]}/>
+        <HomeSport data={this.state.race.data}/>
+        <HomeGlobal data={this.state.photo_mdd.data} banner={this.state.photo_mdd.banner}/>
+        <HomeTheme data={this.state.theme.data}/>
+        <HomeHero data={this.state.post}/>
+        <Footcom/>
+>>>>>>> lxd
       </div>
     )
   }
