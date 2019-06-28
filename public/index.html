@@ -8,29 +8,33 @@
   <meta name="theme-color" content="#000000" />
   <meta name="referrer" content="no-referrer">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
 
-  <title>React App</title>
-  <style>
-    html {
-      font-size: 50px;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      text-decoration: none;
-      list-style: none;
-      font-size: .26rem;
-    }
-  </style>
-</head>
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+    <!-- rem自适应根字体转换 -->
+    <script>
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
 
-</body>
-
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+  </body>
 </html>
