@@ -12,10 +12,12 @@ import HomeSport from "./HomeSport";
 import HomeGlobal from "./HomeGlobal";
 import HomeTheme from "./HomeTheme";
 import HomeHero from "./HomeHero";
+import Footcom from "../../components/footer/Footcom"
 
 
 import axios from "axios";
 import "./home.css"
+
 
 
 class Home extends Component {
@@ -87,6 +89,7 @@ class Home extends Component {
         <HomeGlobal data={this.state.photo_mdd.data} banner={this.state.photo_mdd.banner}/>
         <HomeTheme data={this.state.theme.data}/>
         <HomeHero data={this.state.post}/>
+        <Footcom/>
       </div>
     )
   }
