@@ -5,12 +5,15 @@ class HomeTimelimit extends Component {
   constructor() {
     super();
   }
+  state={
+
+  }
   render() {
     return (
       <div className="mIndex__timelimit">
 
-        <Carousel infinite className='vux-slider mIndex__timelimit__swiper'>
-          {this.props.data.map(item => <div className="vux-swiper-item">
+        <Carousel infinite className='vux-slider mIndex__timelimit__swiper' dots={false}>
+          {this.props.data.map(item => <div className="vux-swiper-item"  style={{height: '3.28rem'}}>
               <a href="#">
                 <div className="mIndex__box__head">
                   <i></i>

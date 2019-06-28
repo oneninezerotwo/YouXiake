@@ -10,6 +10,7 @@ class HomeRecommend extends Component {
   }
 
   render() {
+    // console.log(this.props.data)
     return (
       <div className="mIndex__recommend">
         <div className="mIndexRecommend">
@@ -18,8 +19,7 @@ class HomeRecommend extends Component {
                 <Carousel
                 autoplay={true}
                 infinite
-                beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                afterChange={index => console.log('slide to', index)}
+                dots={false}
                 >
 
                 {this.props.data.map((item, idx) => <div key={idx} className="vux-swiper-item">

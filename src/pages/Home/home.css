@@ -1876,7 +1876,7 @@ body .weui-dialog__ft a {
     width: 7.06rem;
     height: 1.48rem;
     border-radius: .74rem;
-    background: url(/static/img/img5.e4b67c9.png) 50% no-repeat;
+    background: url(../../assets/homeimg/wanle.png) 50% no-repeat;
     background-size: 7.06rem 1.48rem;
     z-index: 100
 }
@@ -1888,6 +1888,7 @@ body .weui-dialog__ft a {
     width: 4.55rem;
     height: 1.48rem;
     background: 50% no-repeat;
+    background-image:url(../../assets/homeimg/local_bg.png);
     background-size: 4.55rem 1.48rem;
     z-index: 10
 }
