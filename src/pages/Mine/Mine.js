@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Badge ,Button} from 'antd-mobile';
-import Footcom from '../../components/footer/Footcom.js';
+import Footcom from '../../components/Footer/Footcom';
 import './Mine.css';
 import {getData} from '../../api';
 
