@@ -12,7 +12,7 @@ import HomeSport from "./HomeSport";
 import HomeGlobal from "./HomeGlobal";
 import HomeTheme from "./HomeTheme";
 import HomeHero from "./HomeHero";
-import Footcom from "../../components/Footer/Footcom"
+import Footcom from "../common/footer/Footcom"
 
 
 import axios from "axios";

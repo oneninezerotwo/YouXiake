@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './order.css'
+import './Order.css'
 class Order extends Component {
     constructor() {
         super()

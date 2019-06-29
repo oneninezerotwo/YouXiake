@@ -3,11 +3,10 @@ import { withRouter } from 'react-router-dom';
 
 import { TabBar, Flex } from 'antd-mobile';
 
-import './Footcom.css';
 import './antd-mobile.css';
-
+import './Footcom.css';
  
-const requireContext = require.context('../../assets/footcom',true);
+const requireContext = require.context('../../../assets/footcom',true);
 const projectImg = requireContext.keys().map(requireContext);
 
 
@@ -29,12 +28,6 @@ class Footcom extends Component{
                   url:projectImg[5],
                   acturl:projectImg[4]
                 },{
-                  name: 'Shequ',
-                  text: '社区',
-                  path: '/shequ',
-                  url:projectImg[5],
-                  acturl:projectImg[4]
-                },{
                   name: 'Quanzi',
                   text: '圈子',
                   path: '/quanzi',
@@ -43,7 +36,7 @@ class Footcom extends Component{
                 },{
                   name: 'Mine',
                   text: '我的',
-                  path: '/mine',
+                  path: '/login',
                   url:projectImg[5],
                   acturl:projectImg[4]
                 }
