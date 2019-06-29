@@ -8,7 +8,7 @@ import Timer from './pages/Register/timer';
 import Youji from './pages/Youji/Youji';
 import Order from './pages/Order/Order';
 import Home from './pages/Home/Home';
-import Mine from './pages/Mine/Mine'
+
  class App extends React.Component{
   render(){
     return (
@@ -21,7 +21,6 @@ import Mine from './pages/Mine/Mine'
           <Route path="/order" component={Order} />
           <Route path="/youji" component={Youji} />
           <Route path="/home" component={Home} />
-          <Route path="/mine" component={Mine}/>
           <Redirect from="/" to="/home" />
         </Switch>
       </Router>
