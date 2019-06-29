@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
-import './Login.css';
+import './login.css';
 import img1 from '../../img/wechat.png';
 import img2 from '../../img/qq.png';
 import { Link, Redirect } from "react-router-dom";
